@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+
+    <title> webRTC Video Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>WebRTC Video Chat</h1>
+
+        <div class="videos">
+
+    <div class="video-box">
+        <h2>Sen</h2>
+
+        <div class="video-container">
+            <video id="localVideo" autoplay muted playsinline></video>
+
+            <div id="micStatus" class="mic-status hidden">
+                🔇 Mikrofon Kapalı
+            </div>
+        </div>
+    </div>
+
+    <div class="video-box">
+        <h2>Karşı Taraf</h2>
+
+        <div class="video-container">
+            <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+    </div>
+
+</div>
+
+        <div class="controls">
+
+            <button id="micButton">
+                🎤 Mikrofonu Kapat
+            </button>
+
+            <button id="cameraButton">
+                📷 Kamerayı Kapat
+            </button>
+
+            <button id="endButton">
+                📞 Görüşmeyi Bitir
+            </button>
+
+            <button id="newCallButton" class="hidden">🔄 Yeni Görüşme
+                
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
